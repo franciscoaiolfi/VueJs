@@ -1,0 +1,22 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<!--Quero tratar o evento do clique para que chame uma função que adcione um-->
+<div id="app">
+  <p>{{contador}}</p>
+  <button v-on:click="somar">somar1</button>
+  <!--V-on:click chama a função somar-->
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      contador: '0'
+    },
+    methods: {
+      // Dentro de methods criei a função que somar +1
+      somar() {
+        this.contador++
+      }
+    }
+  })
+</script>

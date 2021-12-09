@@ -1,0 +1,26 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<div id="app">
+  <p>{{TemplateDom}}</p>
+  <p>{{saudacao()}}</p>
+  <a v-bind:href="link" target="_blank">VueDocumentation</a>
+  <!--Add o targe foi okay-->
+  <!--Com os () chamei o method da function-->
+  <!--Não aplica espaçamanetos-->
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      TemplateDom: 'teste usando this',
+      link: 'https://br.vuejs.org/v2/guide/instance.html'
+    },
+    methods: {
+      saudacao: function () {
+        //Criada uma function que passa uma string
+        return this.TemplateDom // Quero alterar o boa semana para acessar TemplateDom em data
+      } // Na instancia do vue se usa o ***THIS***
+    }
+  })
+</script>
