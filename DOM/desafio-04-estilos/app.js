@@ -4,7 +4,13 @@ new Vue({
     classe1: 'destaque',
     perigo: true,
     classe3: '',
-    classe4: ''
+    classe4: '',
+    cor5: '',
+    estilo5: {
+      width: '100px',
+      height: '100px'
+    },
+    width: '0'
   },
   methods: {
     iniciarEfeito() {
@@ -13,7 +19,14 @@ new Vue({
         this.classe1 = this.classe1 == 'destaque' ? 'encolher' : 'destaque'
       }, 2000) // Aqui defino o intervalo
     },
-    iniciarProgresso() {},
+    iniciarProgresso() {
+      let valor = 0
+      const temporizador = setInterval(() => {
+        valor += 10
+        this.width = `${valor}`
+        if (valor == 100) clearInterval(temporizador)
+      }, 500)
+    },
     setPerigo(event) {
       // Function que recebe o evento
       if (event.target.value == 'true') {

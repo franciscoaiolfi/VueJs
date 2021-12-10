@@ -40,8 +40,8 @@
     Associe os estilos a div abaixo  -->
   <h2>#05</h2>
   <div>
-    <input type="text" />
-    <div></div>
+    <input type="text" v-model="cor5" />
+    <div :style="[estilo5, {backgroundColor: cor5}]">Atividade05</div>
   </div>
 
   <!-- 6) Crie uma barra de progresso simples com setInterval 
@@ -49,7 +49,9 @@
   <h2>#06</h2>
   <div>
     <button @click="iniciarProgresso">Iniciar</button>
-    <div></div>
+    <div class="barra-progresso">
+      <div class="progresso" :style="{width}">Progress</div>
+    </div>
   </div>
 </div>
 <script src="app.js"></script>
