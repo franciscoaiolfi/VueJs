@@ -4,9 +4,9 @@ Methods: Podemos passar métodos que serão executados durante um evento no HTML
 Exemplo:
 --- Input pra alterar o título.
 
-# Ponto Importante sobre o HTML
+# Ponto Importante sobre o HTML - - -
 
-Vue cri acessos diretos dentro do template, voce tem acesso direto. Aquilo que vai ser interpolado dentro do seu template, ele vai ler o que ta dentro, e vai susbtituir por um valor textual, pois o html é feito de valores textuais
+Vue cria acessos diretos dentro do template, voce tem acesso direto. Aquilo que vai ser interpolado dentro do seu template, ele vai ler o que ta dentro, e vai susbtituir por um valor textual, pois o html é feito de valores textuais
 que sao interpretados pelo navegador.
 
 # DIRETIVAS
@@ -37,10 +37,10 @@ Ou utilizando o v-model : V-model:"titulo".
 
 # ------------------ SINTAXE REDUZIDA - SHORHANDS ---------------------------------
 
-No vue podemos simplificar a sintaxe ainda mais:
+      No vue podemos simplificar a sintaxe ainda mais:
 
       No local onde tenho v-on:click -> @:click Vai funcionar e reduzir
-      No local onde tenho v-bind:value=""   ->  :value=""  Vai funcionar e reduziar
+      No local onde tenho v-bind:value=""   ->  :value=""  Vai funcionar e reduzir
 
 # --------------------------------------------------------------------------------
 
